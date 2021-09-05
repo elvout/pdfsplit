@@ -13,6 +13,9 @@ mypy = "^0.910"
 black = "^21.8b0"
 pytest = "^6.2.5"
 
+[tool.poetry.scripts]
+pdfsplit = "pdfsplit.console_main:main"
+
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
