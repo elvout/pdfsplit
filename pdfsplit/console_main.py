@@ -105,7 +105,7 @@ def parse_page_ranges(pagefile: str, offset: int) -> list[tuple[int, int]]:
         if len(page_ranges[i]) == 1:
             page_ranges[i].append(page_ranges[i + 1][0])
 
-    if len(page_ranges[-1]) == 1:
+    if page_ranges and len(page_ranges[-1]) == 1:
         # Remove the last entry in `page_ranges` if it does not
         # constitute a valid interval.
         page_ranges.pop()
