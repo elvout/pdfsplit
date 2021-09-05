@@ -119,9 +119,11 @@ def main() -> None:
     page_ranges = parse_page_ranges(args.pagefile, args.offset)
     reader = PdfFileReader(args.infile)
 
-    for (i, (start, end)) in enumerate(page_ranges):
+    for (_i, (start, end)) in enumerate(page_ranges):
         # format the output filename with 1-indexed numbers
-        o_filename = args.out_fmt.format(i + 1)
+        _i += 1
+        # https://stackoverflow.com/a/54071505
+        o_filename = eval(f'f"""{args.out_fmt}"""')
         extract(reader, start, end, o_filename)
 
 
