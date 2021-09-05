@@ -12,14 +12,20 @@ def parse_args() -> argparse.Namespace:
     """Parse and validate command-line arguments."""
     parser = argparse.ArgumentParser(description="Split PDF files.")
 
-    parser.add_argument("infile", help="The PDF file to split.", type=str)
-
     parser.add_argument(
-        "pagefile", help="A text file containing 1-indexed page ranges.", type=str
+        "infile", help="The filename of the PDF file to split.", type=str
     )
 
     parser.add_argument(
-        "out_fmt", help="A Python format string for output files.", type=str
+        "pagefile",
+        help="A text file containing 1-indexed page ranges to extract.",
+        type=str,
+    )
+
+    parser.add_argument(
+        "out_fmt",
+        help="A Python f-string containing a formatting recipe for the filenames of output PDF files.",
+        type=str,
     )
 
     parser.add_argument(

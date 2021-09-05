@@ -25,7 +25,7 @@ pdfsplit [-h] [-o offset] infile pagefile out_fmt
 ```
 
 - `infile`: the filename of the PDF file to split.
-- `pagefile`: a text file containing page ranges to extract.
+- `pagefile`: a text file containing 1-indexed page ranges to extract.
 - `out_fmt`: a Python f-string containing a formatting recipe
 for the filenames of output PDF files. The f-string should use
 an integer `_i` representing the line number of each interval
