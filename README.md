@@ -33,6 +33,8 @@ in `pagefile`.
   - **This executes arbitrary Python code.** Use with caution.
 - `offset`: the number of leading pages in the `infile` PDF to skip.
 
+See [sample/README.md](sample/README.md) for an example usage.
+
 ### Pagefile Format
 
 Each line of the `pagefile` should contain one space-delimited page
