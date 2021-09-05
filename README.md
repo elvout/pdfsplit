@@ -12,10 +12,11 @@ $ cd pdfsplit
 $ pip3 install [--user] [--upgrade] .
 ```
 
-This should install `pdfsplit` into one of two places.
+This should install `pdfsplit` into:
 
 - `/usr/local/bin` if `--user` is not provided to `pip3`.
-- `~/.local/bin` if `--user` is provided to `pip3`.
+- `~/.local/bin` if `--user` is provided to `pip3` (Linux).
+- `~/Library/Python/3.[x]/bin` if `--user` is provided to `pip3` (macOS).
 
 ## Usage
 
